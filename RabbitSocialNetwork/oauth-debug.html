@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OAuth Debug Information</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .debug-box { background: #f8f9fa; border: 1px solid #dee2e6; padding: 20px; margin: 20px 0; border-radius: 6px; }
+        .url { font-family: monospace; background: #e9ecef; padding: 10px; margin: 10px 0; border-radius: 4px; word-break: break-all; }
+        .error { background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+        .success { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+    </style>
+</head>
+<body>
+    <h1>OAuth Configuration Debug</h1>
+    
+    <div class="debug-box">
+        <h3>Current Configuration</h3>
+        <p><strong>Domain:</strong> <span id="currentDomain"></span></p>
+        <p><strong>Required Callback URL:</strong></p>
+        <div class="url" id="callbackUrl"></div>
+    </div>
+    
+    <div class="debug-box error">
+        <h3>Error 400: redirect_uri_mismatch</h3>
+        <p>This error occurs when the callback URL in Google Console doesn't exactly match the URL being used by your application.</p>
+        <p><strong>Common causes:</strong></p>
+        <ul>
+            <li>URL case sensitivity (http vs https)</li>
+            <li>Trailing slashes or extra characters</li>
+            <li>Wrong domain or subdomain</li>
+            <li>Changes not yet propagated (takes 2-5 minutes)</li>
+        </ul>
+    </div>
+    
+    <div class="debug-box">
+        <h3>Step-by-Step Fix</h3>
+        <ol>
+            <li><a href="https://console.cloud.google.com/apis/credentials" target="_blank">Open Google Console</a></li>
+            <li>Find OAuth Client ID: <code>647150764797-5m5uk6h4gie50l0h1a7pbav9vh0cuh48.apps.googleusercontent.com</code></li>
+            <li>In "Authorized redirect URIs" section, add EXACTLY: <div class="url" id="exactUrl"></div></li>
+            <li>Save and wait 5 minutes</li>
+            <li><a href="/login">Test the login again</a></li>
+        </ol>
+    </div>
+    
+    <script>
+        // Get current domain
+        const domain = window.location.host;
+        const callbackUrl = `https://${domain}/auth/google/callback`;
+        
+        document.getElementById('currentDomain').textContent = domain;
+        document.getElementById('callbackUrl').textContent = callbackUrl;
+        document.getElementById('exactUrl').textContent = callbackUrl;
+    </script>
+</body>
+</html>

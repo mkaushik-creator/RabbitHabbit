@@ -1,0 +1,69 @@
+Here’s the improved and complete prompt for building the Rabbit app on Replit, now incorporating a 5-question onboarding flow to personalize the content generation process:
+
+⸻
+
+Replit Project Prompt: Rabbit – AI-Powered Multiplatform Post Generator for Influencers
+
+Overview:
+Design and build Rabbit, an AI-powered web app that enables influencers, creators, and personal brands to generate, stylize, and publish content across Instagram, LinkedIn, Twitter (X), and Discord—all from one place. The goal is to reduce the effort of content creation using AI while maintaining personal voice and relevance.
+
+⸻
+
+Core Idea:
+
+Rabbit asks users just 5 simple questions to generate tailored, platform-optimized content—including captions, hashtags, image prompts, and post formats. Users can swipe through ideas, choose one, and auto-publish or schedule it across connected platforms.
+
+⸻
+
+Initial 5-Question Onboarding (Personalized Prompting):
+	1.	What do you want to share today?
+(Thought / Quote / Achievement / Meme / Product / AMA / Launch)
+	2.	Who are you speaking to?
+(Aspiring developers / Tech VCs / Gen Z / Founders / AI enthusiasts)
+	3.	What’s your tone?
+(Witty / Tactical / Professional / Vulnerable / Philosophical)
+	4.	What platform(s) do you want to post on?
+(LinkedIn / Instagram / Twitter / Discord)
+	5.	Would you like to generate an image or upload your own?
+(Generate via DALL·E / Upload manually / Pick from suggestions)
+
+Based on these answers, Rabbit generates a fully formatted post for each selected platform, along with:
+	•	Suggested image (via DALL·E)
+	•	Captions & structure tailored per platform
+	•	Hashtags and tag suggestions
+	•	Optional scheduling
+
+⸻
+
+Core Features:
+	•	AI-Generated Captions: Platform-optimized using OpenAI GPT
+	•	Image Generation: DALL·E-based visual creation tied to post intent
+	•	Multi-Platform Formats: LinkedIn posts, Instagram captions, Twitter threads, Discord messages
+	•	Sephora-Inspired Inspiration Engine: Shows top formats other influencers in the same space are using
+	•	Post History & Remix: See what you posted, remix old ideas
+	•	Auto-Publish & Schedule: Connect and post directly
+
+⸻
+
+Tech Stack:
+	•	Frontend: React / Next.js + Tailwind CSS
+	•	Backend: Node.js (Express) or Supabase
+	•	Database: Firebase Firestore or Supabase DB
+	•	AI APIs:
+	•	OpenAI (ChatGPT & DALL·E)
+	•	(Optional) Whisper for voice-to-text post ideas
+	•	Auth: Firebase Auth / Supabase
+	•	Social Media APIs: Simulated or real APIs for LinkedIn, Instagram Graph, Twitter (X), and Discord
+
+⸻
+
+User Flow Example:
+	1.	Creator opens Rabbit
+	2.	Rabbit asks 5 questions (takes <30 sec)
+	3.	Rabbit generates 3 post drafts per platform + image suggestions
+	4.	Creator swipes, tweaks, and clicks “Post”
+	5.	Done. Analytics + content saved in dashboard
+
+⸻
+
+Would you like me to now populate the onboarding flow logic in code, or design the 5-question UI flow as a clickable prototype?

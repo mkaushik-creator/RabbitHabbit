@@ -1,0 +1,67 @@
+**Enhanced RabbitHabit Dashboard Design**
+
+Implement a modern, visually appealing dashboard for "RabbitHabit," a platform for content creators focusing on social media management. Use Tailwind CSS for styling and improve the frontend with the following sections and enhancements:
+
+---
+
+### **Instructions:**
+YOU are tasked with redesigning the "RabbitHabit" dashboard to make it more engaging and user-friendly. Follow these steps:
+
+1. **Improve the visual hierarchy with gradients, spacing, and bold typography.**
+2. **Modernize buttons and cards with hover effects and animations.**
+3. **Add interactivity with fade-ins and counter animations.**
+4. **Ensure responsiveness for mobile devices.**
+5. **Enhance with optional features like a hero illustration and dark mode.**
+
+---
+
+### **Design Implementation:**
+
+1. **Header Section:**
+   - **Logo:** Use a purple circular background with a white rabbit icon (`bg-purple-500 rounded-full p-2`). Add a shadow (`shadow-md`). Display "Welcome to RabbitHabit" in `text-2xl font-bold text-gray-800`.
+   - **User Status:** Style "Pro User" with a green star icon (`text-green-500`) and "Session Active" with a blue checkmark (`text-blue-500`). Use `bg-gray-100 px-3 py-1 rounded-full`.
+   - **Menu Icon:** Keep the hamburger icon responsive (`text-gray-800 text-2xl`).
+
+2. **Main Content Section:**
+   - **Greeting:** Style "Welcome back, DEMO!" with `font-poppins text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500`.
+   - **Subheading:** Use "Ready to create amazing content? Let's get started with your next viral post." in `text-gray-600 text-lg leading-7`.
+   - **Statistics Section:**
+     - Wrap in `grid grid-cols-1 md:grid-cols-3 gap-4`.
+     - Each card:
+       - "12 Posts Created": `bg-gradient-to-br from-purple-100 to-white p-4 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-transform`. Add a post icon (e.g., `<svg>` or Font Awesome).
+       - "5 Platforms Connected": `bg-gradient-to-br from-blue-100 to-white`. Add a globe icon.
+       - "847 Total Reach": `bg-gradient-to-br from-purple-100 to-white`. Add an eye icon.
+       - Numbers: Use `text-2xl font-bold` with `stat-number` class for animation.
+
+3. **Quick Actions Section:**
+   - Title: "QUICK ACTIONS" in `text-xl font-bold text-gray-800 uppercase`.
+   - Replace circles with cards in `grid grid-cols-1 sm:grid-cols-2 gap-4`:
+     - "AI Chat Creator": `bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-lg text-white hover:shadow-lg hover:scale-105 transition-transform`. Add a chat bubble icon and "MOST POPULAR" badge (`bg-pink-600 text-xs px-2 py-1 rounded`).
+     - "Generate Content": `bg-gradient-to-r from-blue-500 to-cyan-500`.
+     - "Connect Platforms": `bg-gradient-to-r from-green-500 to-lime-500`.
+     - "Hashtag Generator": `bg-gradient-to-r from-orange-500 to-yellow-500`.
+     - Add a right arrow and bounce animation on load.
+
+4. **Recent Activity Section:**
+   - Title: "RECENT ACTIVITY" in `text-xl font-bold text-gray-800 uppercase`.
+   - Placeholder: "No recent activity yet. Start creating posts to see your activity here!" in `text-gray-500 text-center`. Add a "Create Post" button: `bg-blue-500 text-whiteאות
+
+5. **Bottom Navigation Bar:**
+   - Style with glassmorphism: `bg-white bg-opacity-20 backdrop-blur-md fixed bottom-0 w-full p-4 shadow`.
+   - Icons: Use `text-gray-800 hover:text-blue-500 hover:scale-110 transition-transform`. Highlight "Home" with `text-blue-500`.
+
+**Overall Styling:**
+- Body: `bg-gradient-to-b from-white to-purple-50 min-h-screen font-poppins p-6`.
+- Include Poppins: `<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">`.
+
+**Animations:**
+- Fade-in: Add to `tailwind.config.js`:
+  ```javascript
+  module.exports = {
+    theme: {
+      extend: {
+        animation: { fadeIn: 'fadeIn 1s ease-in' },
+        keyframes: { fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } } },
+      },
+    },
+  };

@@ -1,0 +1,61 @@
+Create a modern, responsive, and user-friendly UI for connecting social media platforms. The interface should include the following elements and enhancements:
+
+1. **Layout & Structure**
+   - Display each platform in a card-style layout (Instagram, Twitter/X, LinkedIn, TikTok, Facebook, YouTube Shorts).
+   - Each card should have:
+     - Platform icon
+     - Platform name
+     - Checkbox to select
+     - A “Connect” button (or “Connected” indicator if already connected)
+     - Optional mini-preview for connected platforms (e.g. profile name, follower count)
+
+2. **Design Theme**
+   - Include both dark and light themes.
+   - Add a toggle switch at the top-right to switch between themes.
+
+3. **Platform Styling**
+   - Apply subtle background colors or accents based on each platform’s brand colors:
+     - Instagram: gradient border or tint
+     - Twitter/X: light blue/black
+     - LinkedIn: light blue
+     - TikTok: dark gray/pink
+     - Facebook: blue
+     - YouTube Shorts: soft red
+
+4. **Interactions**
+   - Add hover effects to cards and buttons:
+     - Slight lift (`scale(1.02)`)
+     - Shadow on hover
+     - Button hover glow
+   - Animate checkbox tick with smooth transition.
+
+5. **Smart Selection**
+   - Add a “Select All Platforms” checkbox at the top.
+   - Ticking it selects all available platforms.
+
+6. **Status Indicators**
+   - For connected platforms:
+     - Change button to green “✅ Connected”
+     - Display green dot or check icon
+     - Optional: Tooltip with timestamp (e.g., “Connected at 3:15 PM”)
+   - Add red/gray icons for failed/pending status (optional).
+
+7. **Responsive Design**
+   - Ensure the layout adapts for mobile:
+     - Cards stack vertically
+     - Touch-friendly spacing and large icons
+     - Buttons become full-width if needed
+
+8. **Accessibility**
+   - Ensure high color contrast
+   - Support keyboard navigation
+   - Use `aria-labels` for buttons and checkboxes
+
+9. **Optional Advanced View**
+   - Add a toggle to switch to “Minimal Mode” showing only platform icons and connection chips (for power users)
+
+10. **Styling Framework**
+   - Use Tailwind CSS or standard CSS-in-JS (if preferred)
+   - Use consistent spacing, rounded corners (`rounded-xl`), and soft shadows
+
+Generate this UI with clean, production-ready HTML/CSS/JS (or React if preferred) using best practices.

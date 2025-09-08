@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RabbitHabit Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard-style.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+
+    <!-- Main Container -->
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="user-welcome">
+                    <div class="avatar-container">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" 
+                             alt="User Avatar" class="user-avatar">
+                        <div class="avatar-glow"></div>
+                    </div>
+                    <div class="welcome-text">
+                        <h1 class="welcome-title">Welcome back, Demo!</h1>
+                        <p class="welcome-subtitle">Ready to create amazing content?</p>
+                    </div>
+                </div>
+                
+                <div class="status-badges">
+                    <span class="badge pro-badge">
+                        <i class="fas fa-crown"></i>
+                        Pro User
+                    </span>
+                    <span class="badge session-badge">
+                        <i class="fas fa-circle pulse"></i>
+                        Session Active
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="content-grid">
+                <!-- Quick Stats -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: var(--coral);">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">24</h3>
+                            <p class="stat-label">Posts Created</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: var(--teal);">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">1.2K</h3>
+                            <p class="stat-label">Total Likes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: var(--sage);">
+                            <i class="fas fa-share"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">89</h3>
+                            <p class="stat-label">Shares</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Cards -->
+                <div class="action-cards">
+                    <div class="action-card">
+                        <div class="card-header">
+                            <i class="fas fa-magic" style="color: var(--coral);"></i>
+                            <h3>AI Content Generator</h3>
+                        </div>
+                        <p>Create engaging posts with AI assistance</p>
+                        <button class="action-btn" style="background: var(--coral);">
+                            Start Creating
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="card-header">
+                            <i class="fas fa-calendar" style="color: var(--teal);"></i>
+                            <h3>Schedule Posts</h3>
+                        </div>
+                        <p>Plan your content calendar efficiently</p>
+                        <button class="action-btn" style="background: var(--teal);">
+                            Open Scheduler
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="card-header">
+                            <i class="fas fa-chart-line" style="color: var(--yellow);"></i>
+                            <h3>Analytics</h3>
+                        </div>
+                        <p>Track your content performance</p>
+                        <button class="action-btn" style="background: var(--yellow);">
+                            View Stats
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-plus-circle"></i>
+                <span>Create</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Schedule</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Analytics</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const icon = document.getElementById('theme-icon');
+            
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('theme-icon').className = 'fas fa-sun';
+        }
+
+        // Add click animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.action-btn, .nav-item');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('div');
+                    ripple.className = 'ripple';
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

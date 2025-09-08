@@ -1,0 +1,48 @@
+The current popup suggestion system in the AI Chat Creator is breaking the user experience. Every time I press "Enter" or click the send button, the "Let's make this more specific!" popup keeps appearing repeatedly, which makes it impossible to submit or interact naturally with the input field. Also, when I click one of the suggestion options, instead of enhancing or rephrasing the original input with those parameters, it just pastes the option text verbatim into the input box, which is not helpful.
+
+Please fix the following issues:
+
+1. 🚫 Popup Interruption Bug
+Prevent the suggestion popup from reappearing on every single input submission.
+
+Show the popup only once per new user input, not repeatedly unless the text was significantly changed.
+
+Allow users to dismiss the popup permanently via a close "X" button or "Don't show again" toggle.
+
+2. ✍️ Suggestion Interaction Bug
+When a user clicks a suggestion like “Would you like to emphasize nostalgia?”, instead of appending that sentence into the text input, it should intelligently reframe the user’s input using that suggestion behind the scenes.
+
+For example, if the user writes:
+“walking on the street and I saw people fighting”
+and clicks “emphasize emotional contrast,” the app should enhance the tone and depth of the text rather than literally pasting that phrase.
+
+Apply the selected suggestion to rewrite or expand the input via a background prompt modification, not by inserting it directly.
+
+3. 📏 Content Length Control Bug
+Currently, the output doesn't always match the "Content Length" selection (Short / Medium / Long).
+
+Ensure content respects the word count range selected:
+
+Short: ~50 words
+
+Medium: ~100 words
+
+Long: ~200+ words
+
+If the length is set to "Long," the system must generate substantially more reflective or expanded posts than short mode. Enforce stricter internal controls for word count.
+
+4. 🧠 Input Enrichment Improvements
+When content type is set to "Business", tone should change accordingly (avoid overly poetic/silly writing unless selected).
+
+Enhance prompt processing to better match the combination of selected tone, format, emoji style, and niche.
+
+Consider implementing a real-time preview of what suggestion effect will be applied, or offer a rewritten preview popup instead of just injecting plain text.
+
+✅ Optional Improvements (Future Enhancements):
+
+Allow user to edit the AI-enriched prompt before it’s submitted.
+
+Save previous responses in a local history log.
+
+Add tooltips explaining how each tone or emoji style changes the result.
+

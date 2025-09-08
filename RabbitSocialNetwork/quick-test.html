@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OAuth Test</title>
+</head>
+<body>
+    <h1>Google OAuth Test</h1>
+    <p>Current domain: <span id="domain"></span></p>
+    <p>Expected callback: <span id="callback"></span></p>
+    <a href="/api/auth/google" style="background: blue; color: white; padding: 10px; text-decoration: none;">Test Google Login</a>
+    
+    <script>
+        document.getElementById('domain').textContent = window.location.host;
+        document.getElementById('callback').textContent = `https://${window.location.host}/auth/google/callback`;
+    </script>
+</body>
+</html>

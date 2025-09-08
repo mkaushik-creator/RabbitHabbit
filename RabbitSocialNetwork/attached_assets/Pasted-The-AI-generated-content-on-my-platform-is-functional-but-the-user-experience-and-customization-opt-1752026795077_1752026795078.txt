@@ -1,0 +1,41 @@
+The AI-generated content on my platform is functional, but the user experience and customization options are currently limited. I want to make the following enhancements to improve usability and relevance:
+
+1. **Output Format Options**  
+   Add a formatting selector above the AI output that allows users to choose their preferred style:
+   - [ ] Paragraph  
+   - [ ] Poetic  
+   - [ ] Bullet-style  
+   - [ ] Concise/Snappy  
+   - [ ] Story-style
+
+2. **Emoji Toggle**  
+   Include a toggle switch that lets users turn emojis ON or OFF before generating content. The current output always includes emojis, which may not suit all users.
+
+3. **Hashtag Suggestions**  
+   Automatically suggest 2–3 hashtags relevant to the user’s prompt and platform (e.g. #unexpectedvisitor #tinycreature for Instagram or X). Show these separately under the post preview.
+
+4. **Non-Repetitive Sentence Openings**  
+   Currently, all platform outputs start similarly ("I sat frozen", "As I sat", etc.). Add randomization to the opening sentence to avoid repetition and make each platform’s version feel unique.
+
+5. **Tone & Niche Personalization**  
+   Let users select their preferred:
+   - Niche: (e.g. Writer, Tech Reviewer, Food Blogger, Travel, Fitness, etc.)
+   - Tone: (e.g. Witty, Calm, Professional, Friendly, Minimalist)
+
+   Use this selection to guide how content is generated for different platforms.
+
+6. **Inline Text Editing + Smart Rewriting Options**  
+   Enable users to:
+   - Click on any part of the AI text and request quick actions like:  
+     “Make this funnier”, “Simplify this”, “Make it more emotional”, or “Shorten it”
+   - This would help them fine-tune results without fully regenerating everything.
+
+7. **Intro Line Shuffle Button**  
+   Add a button that allows users to shuffle the **first sentence only** of the generated content. This helps them vary tone quickly without losing the rest of the text.
+
+8. **User Prompt Assistance (Optional)**  
+   Add a helper that suggests improvements to vague user inputs. For example, if a user types “i was sitting on a chair and a mouse came in,” the app can suggest:  
+   “Would you like to describe the emotion (e.g. surprised, scared)?” or  
+   “Should the story be poetic or humorous?”
+
+These features will significantly enhance the creative control and experience for users generating content for different platforms. Please implement the features step-by-step or modularly depending on feasibility.

@@ -1,0 +1,49 @@
+Create a visually stunning, modern login page UI using Tailwind CSS and optionally React. The design should feel premium and aesthetic like top SaaS apps (Notion, Linear, Vercel). Include all the following elements:
+
+🧊 Glassmorphism Login Card:
+- Center the card both vertically and horizontally (`flex justify-center items-center min-h-screen`)
+- Use `bg-white/30 backdrop-blur-xl shadow-2xl rounded-3xl p-8` for the card
+- Responsive design using `max-w-md w-full px-4 sm:px-8`
+
+🌈 Background:
+- Apply a smooth gradient background: `bg-gradient-to-r from-[#fdfbfb] to-[#ebedee]`
+- Add a dark mode version: `dark:from-[#1f1f1f] dark:to-[#2c2c2c]`
+- Include a toggle switch in the top-right corner to switch between light/dark mode (`🌙/☀️` icon toggle)
+
+🔐 Login Form Fields:
+- Modern styled inputs with rounded corners, inner shadow: `rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500`
+- Include placeholder text and left-side icons inside the inputs (use Heroicons or Lucide icons)
+- Add a password visibility toggle (eye icon)
+
+🧠 Social Login Options:
+- Add Google and GitHub buttons with respective brand colors
+- Include logos/icons, hover effects, and subtle transitions
+- Buttons should be styled like pills with `rounded-full px-6 py-2 shadow-md`
+
+🔥 Buttons & Animation:
+- Primary Sign In button should use gradient: `bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold py-2 px-6 rounded-xl shadow-lg`
+- On hover: scale slightly with `transition-all duration-300 transform hover:scale-105`
+- On click: show a spinner or loading animation using CSS
+
+📱 Responsive UX:
+- Fully mobile responsive layout (`sm`, `md`, `lg`)
+- Form stacks vertically on mobile and tightens spacing
+
+💬 Typography:
+- Use clean modern fonts like `Inter` or `Poppins`
+- Headline: `text-3xl font-bold`
+- Subtext: `text-base text-slate-600`
+- Dark mode text variants: `dark:text-slate-200`
+
+📎 Additional Features:
+- Add a "Remember me" checkbox with custom styling
+- "Forgot Password?" link beside the password field
+- Add a subtle animated profile icon or logo at the top (bounce/fade)
+- Add animated transitions on card load (e.g., `fade-in` or `slide-up`)
+- Include a minimalist footer below with links to Terms of Service and Privacy Policy in `text-xs text-slate-400 underline`
+
+⚙️ Technologies:
+- Tailwind CSS for styling
+- Heroicons or Lucide React for icons
+- Framer Motion (if using React) for animations (e.g., fade-in, card slide)
+- Toggle state (React state if applicable) for dark mode, password visibility, and loading animation

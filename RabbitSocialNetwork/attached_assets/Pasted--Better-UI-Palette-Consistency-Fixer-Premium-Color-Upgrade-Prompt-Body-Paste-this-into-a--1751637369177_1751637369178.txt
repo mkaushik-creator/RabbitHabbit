@@ -1,0 +1,44 @@
+🎨 Better UI Palette Consistency Fixer + Premium Color Upgrade
+
+🟣 Prompt Body (Paste this into a cell in Google Sheets or Replit’s AI prompts panel):
+
+You are an AI assistant tasked with applying a premium, cohesive color palette across every page and component of the RabbitHabbit website.
+
+🔹 New “Gorgeous” Color Palette (hex):
+  • Primary (Interactive Elements / Buttons):      #5A67D8  (Vibrant Indigo)  
+  • Secondary (Accents / Highlights):             #48BB78  (Fresh Mint Green)  
+  • Accent (Calls to Action / Icons):             #ED64A6  (Warm Pink)  
+  • Background (Page Backgrounds):                #F7FAFC  (Soft Off‑White)  
+  • Surface (Cards / Containers):                 #FFFFFF  (Pure White)  
+  • Text Primary (Headings / Body Copy):          #2D3748  (Dark Slate)  
+  • Text Secondary (Subtext / Muted Copy):       #9CA3AF  (Cool Grey)  
+  • Border / Divider:                             #E2E8F0  (Light Gray)
+
+Instructions:
+1. **Site‑Wide Theme**  
+   - Replace existing dashboard‑only palette with the new colors on **all pages**, especially the main homepage (landing, hero, features).  
+   - Update global variables (e.g. Tailwind config, CSS custom properties) so that everyone uses these hex values.
+
+2. **Component Scanning**  
+   - Search through React/HTML/CSS for any inlined styles or outdated Tailwind classes.  
+   - Convert old color classes (e.g. `bg-beige`, `text-yellow-500`) to the new ones (`bg-[#F7FAFC]`, `text-[#2D3748]`, `border-[#E2E8F0]`, etc.).
+
+3. **Accessibility & Contrast**  
+   - Ensure text meets WCAG AA contrast ratios against backgrounds.  
+   - Adjust slightly if needed (e.g. darken primary text to #1F2937).
+
+4. **Maintain Existing Layout & Components**  
+   - Do **not** rewrite layouts—only refresh their color stylings.  
+   - Preserve any special dashboard badges or animations, but recolor them to match the new palette.
+
+5. **Key Files & Folders**  
+   - `tailwind.config.js` (extend `colors` section)  
+   - Global CSS/SCSS (variables, root selectors)  
+   - `/src/components/**` (buttons, cards, navbars)  
+   - `/public/index.html` or `/src/pages/Home.jsx` (landing page)
+
+✨ **Example Before & After**  
+- Before (Homepage hero): beige bg + default blue button  
+- After (Homepage hero): `bg-[#F7FAFC]` + `btn bg-[#5A67D8] hover:bg-[#48BB78]`  
+
+Use this prompt to guide the AI in making a site‑wide aesthetic uplift that mirrors the polish of today’s best web experiences.  

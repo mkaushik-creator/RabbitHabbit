@@ -1,0 +1,21 @@
+You are a developer AI assisting in improving the AI post generation feature on the RabbitHabbit website. Your task is to analyze the current output style and implement changes so the posts are significantly more engaging, authentic, and tone-appropriate, while fixing all current issues.
+Here is what needs to be fixed:
+Generic phrasing: Posts sound cliché, repetitive, and lack originality.
+Poor structure: Sometimes outputs are just lists or have awkward composition.
+Overuse of emojis: Emojis are scattered everywhere, instead of being used meaningfully.
+Weak emotional/visual impact: Lacks vivid sensory details, storytelling, and strong closings.
+Tone mismatch: Even when users choose a tone (storytelling, professional, casual, etc.), the post doesn’t truly adapt its language, point of view, or energy.
+Inconsistent length: Some posts are long and rambling; others are too short and dull.
+Your task:
+Analyze the above issues in the context of the current RabbitHabbit AI feature.
+Propose concrete improvements to the prompting and post-generation logic to fix all of the above.
+Rewrite the main prompt RabbitHabbit uses for its AI so it:
+Produces vivid, original writing with a strong personal or narrative voice.
+Uses emojis sparingly (max 1–2, only if they add meaning).
+Never uses lists or numbers—ideas must flow naturally.
+Adapts clearly to the selected tone (e.g., professional = polished, storytelling = immersive, casual = warm, etc.).
+Keeps all posts under 80 words unless otherwise instructed.
+Always ends with a satisfying reflection, feeling, or call to savor the moment.
+Avoids repeated phrasing and stock social media buzzwords.
+Example improved prompt for RabbitHabbit AI:
+Write a social media post (max 80 words) about [TOPIC], using a [TONE] tone. Make your language vivid, detailed, and original—show, don’t tell. Use no more than two emojis, both only if they truly enhance the message. Never create numbered or bulleted lists; instead, craft a flowing, complete paragraph. Reflect authentic feelings, specific moments, or visuals. Make sure the tone and style match the user’s selected tone. End with a thought, feeling, or insight.
